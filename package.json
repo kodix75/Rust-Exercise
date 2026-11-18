@@ -1,0 +1,28 @@
+{
+  "name": "rust-exercise",
+  "version": "0.2.0",
+  "private": true,
+  "description": "Ten small Rust programs — npm runs the commands, cargo does the build.",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "ex": "node scripts/exercise.mjs",
+    "check": "cargo check --all-targets",
+    "build": "cargo build --all-targets",
+    "test": "node scripts/verify.mjs",
+    "test:ex": "node scripts/test-exercise.mjs",
+    "test:all": "node scripts/test-exercise.mjs all",
+    "test:rust": "cargo test",
+    "lint": "cargo clippy --all-targets -- -D warnings",
+    "fmt": "cargo fmt --all -- --check",
+    "fmt:fix": "cargo fmt --all"
+  },
+  "keywords": [
+    "rust",
+    "learning",
+    "exercises",
+    "cargo"
+  ]
+}
