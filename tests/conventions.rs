@@ -54,7 +54,10 @@ fn package_is_the_exercise_workspace() {
 #[test]
 fn target_directory_is_ignored() {
     let gitignore = fs::read_to_string(root().join(".gitignore")).expect(".gitignore is readable");
-    assert!(gitignore.contains("/target"), ".gitignore must ignore /target");
+    assert!(
+        gitignore.contains("/target"),
+        ".gitignore must ignore /target"
+    );
 }
 
 #[test]
